@@ -4,17 +4,17 @@
             $nombre = $_POST["nombre"];
             $dsn="mysql:host=localhost;dbname=covid";
             $user="root";//user : usuario
-            $pass="";//user : clave de usuario
+            $pass="root";//pass : clave de usuario
             $db = new PDO($dsn, $user, $pass);
-            $pacientes = $db->query("SELECT*FROM pacientes
-            where nombres like '%$nombres%'");
+            $pacientes = $db->query("SELECT * FROM pacientes 
+            where nombres like '%$nombre%'");
             $resultado=[];
             foreach ($pacientes as $row) {
                 array_push($resultado,$row);
             }
             echo json_encode($resultado);
         } catch (PDOException $e) {
-            echo "ERROR: ".$e->getMessage();
+            echo "Error: ".$e->getMessage();
         }
     }
 ?>
