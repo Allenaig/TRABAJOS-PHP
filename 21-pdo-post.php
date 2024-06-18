@@ -42,8 +42,8 @@
             exit;
         }
 
-        if ($tos==1 || $fiebre==1 || $disnea==1 || $dolor_muscular==1 ||
-        $gripe==1 || $Presion_alta==1 || $Fatiga==1 || $Garraspera==1){
+        if ($tos==1 || $fiebre==0 || $disnea==0 || $dolor_muscular==0 ||
+        $gripe==0 || $Presion_alta==1 || $Fatiga==1 || $Garraspera==1){
             $resultado = "1";
         }
         else {
