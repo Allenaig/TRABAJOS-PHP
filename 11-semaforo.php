@@ -19,12 +19,12 @@
     $numero=fgets(STDIN);
 
     if($numero == 1) {
-        echo "\nPARA";
+        echo "\n\033[31mPARA\033[0m";
     }
     if($numero == 2) {
-        echo "\nESPERA";
+        echo "\n\033[33mESPERA\033[0m";
     }
     if($numero == 3) {
-        echo "\nAVANZA";
+        echo "\n\033[32mAVANZA\033[0m";
     }
 ?>
